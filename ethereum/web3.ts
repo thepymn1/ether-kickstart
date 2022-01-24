@@ -1,6 +1,8 @@
-import Web3 from 'web3';
+import Web3Type from 'web3';
 
-let web3: Web3;
+declare const Web3: any;
+
+let web3: Web3Type;
 
 if (typeof (window as any).ethereum !== 'undefined') {
   web3 = new Web3((window as any).ethereum);

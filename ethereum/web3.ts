@@ -5,6 +5,7 @@ declare const Web3: any;
 let web3: Web3Type;
 
 if (typeof (window as any).ethereum !== 'undefined') {
+  (window as any).ethereum.enable();
   web3 = new Web3((window as any).ethereum);
 } else {
   const provider = new Web3.providers.HttpProvider(

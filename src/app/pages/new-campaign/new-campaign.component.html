@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<div class="w-screen mx-10 mt-12 text-center">
+  <form class="text-center">
+    <mat-form-field class="w-96 block" appearance="fill">
+      <mat-label>Minimum Contribution (wei)</mat-label>
+      <input
+        name="value"
+        class="mb-2"
+        matInput
+        placeholder="Ex: 100"
+        [(ngModel)]="value"
+      />
+    </mat-form-field>
+  </form>
+  <button class="btn inline-block -mt-5" (click)="submit()">Submit</button>
+</div>

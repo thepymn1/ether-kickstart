@@ -7,9 +7,17 @@ import { Web3Service } from 'src/app/shared/services/web3.service';
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
+  campaigns: string[] = [];
+
   constructor(private web3Service: Web3Service) {}
 
   ngOnInit(): void {
-    // this.web3Service;
+    this.getCampaigns();
+  }
+
+  getCampaigns() {
+    this.web3Service.getDeployedCampaigns().then((value) => {
+      this.campaigns = value;
+    });
   }
 }

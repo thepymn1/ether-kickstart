@@ -1,1 +1,20 @@
-<p>index works!</p>
+<app-header></app-header>
+
+<div class="mx-10 mt-4 flex items-center justify-between">
+  <div>
+    <div class="text-2xl font-light flex items-center text-gray-700">
+      <mat-icon class="w-4">payments</mat-icon>
+      <h3 class="ml-2">Open Campaigns</h3>
+    </div>
+    <div class="ml-10">
+      <app-card
+        *ngFor="let campaign of campaigns"
+        [campaignAddress]="campaign"
+      ></app-card>
+    </div>
+  </div>
+  <div class="w-full text-center self-start mt-32">
+    <h3 class="text-3xl font-thin">Want to create a Campaign?</h3>
+    <a routerLink="/campaigns/new" class="btn">Click Here To Start</a>
+  </div>
+</div>

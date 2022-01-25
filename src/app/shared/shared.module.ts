@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { CardComponent, HeaderComponent } from '.';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [CardComponent, HeaderComponent],
+  imports: [CommonModule, MatIconModule, RouterModule],
+  exports: [CardComponent, HeaderComponent, MatIconModule],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -1,0 +1,10 @@
+<div
+  class="bg-gray-100 w-fit p-20 pt-4 h-24 rounded-sm shadow-lg hover:shadow-xl transition-all flex flex-col items-center my-7"
+>
+  <span class="text-lg font-light">{{ campaignAddress }}</span>
+  <a
+    class="mt-2 text-lg font-normal cursor-pointer"
+    [routerLink]="['/campaigns', 'show', campaignAddress]"
+    >View Campaign</a
+  >
+</div>
